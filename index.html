@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*BEM*/
+        .flash {
+            margin: 30px;
+            padding: 15px;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 3px;
+        }
+
+        .flash--success {
+            border-color: green;
+            box-shadow: -40px 0px 0px green inset;
+        }
+
+        .flash--warning {
+            border-color: orange;
+            box-shadow: -40px 0px 0px orange inset;
+        }
+
+        .flash__title {
+            font-weight: bolder;
+        }
+
+        .flash__body {
+            padding-right: 40px;
+        }
+
+        /*SUIT CSS*/
+        .FlashMsg {
+            margin: 30px;
+            padding: 15px;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 3px;
+        }
+
+        .FlashMsg.FlashMsg--success {
+            border-color: green;
+            box-shadow: -40px 0px 0px green inset;
+        }
+
+        .FlashMsg.FlashMsg--warning {
+            border-color: orange;
+            box-shadow: -40px 0px 0px orange inset;
+        }
+
+        .FlashMsg-title {
+            font-weight: bolder;
+        }
+
+        .FlashMsg-body {
+            padding-right: 40px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<h1>BEM</h1>
+
+<!--naming template: block__element&#45;&#45;modifier ex. form__submit&#45;&#45;disabled-->
+
+<!--BLOCK flash-->
+<!--MOD success (flash&#45;&#45;success)-->
+<!--MOD warning (flash&#45;&#45;warning)-->
+<!--ELEMENT title  (flash__title)-->
+<!--ELEMENT body   (flash__body)-->
+<!--ELEMENT handle_bar (flash__handle_bar)-->
+  <!--MOD success (flash__handle-bar&#45;&#45;success)-->
+  <!--MOD warning (flash__handle-bar&#45;&#45;warning)-->
+
+<!--Modifier classes are used together with the block and element class, like so:-->
+<!--<div class="b-heading b-heading_level_alpha">BEM</div>-->
+
+<!--flash message 1 BEM-->
+<div class="flash flash--success">
+    <div class="flash__title">
+        Success!
+    </div>
+    <p class="flash__body">
+        Elit. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit.
+        <a href="#">lorem@ipsum.org</a>
+    </p>
+</div>
+
+<!--flash message 2 BEM-->
+<div class="flash flash--warning">
+    <div class="flash__title">
+        Warning:
+    </div>
+    <p class="flash__body">
+        Elit. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit.
+        <a href="#">lorem@ipsum.org </a>
+    </p>
+</div>
+
+<!--###############################################################-->
+
+<h1>SUIT CSS</h1>
+<!--Components + Utilities-->
+<!--Utilities. u-[sm-|md-|lg-]<utilityName>-->
+<!--Components. [<namespace>-]<ComponentName>[-descendentName][&#45;&#45;modifierName]-->
+<!--Use is-stateName to reflect changes to a component's state. Ex. .Tweet.is-expanded-->
+
+<!--COMPONENT: FlashMsg-->
+<!--MODIFIER: success (FlashMsg&#45;&#45;success)-->
+<!--MODIFIER: warning (FlashMsg&#45;&#45;warning)-->
+<!--DESCENDANT: title (FlashMsg-title)-->
+<!--DESCENDANT: body (FlashMsg-body)-->
+
+<!--flash message 1 SUIT CSS-->
+<div class="FlashMsg FlashMsg--success">
+    <div class="FlashMsg-title">
+        Success!
+    </div>
+    <p class="FlashMsg-body">
+        Elit. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit.
+        <a href="#">lorem@ipsum.org</a>
+    </p>
+</div>
+
+<!--flash message 2 SUIT CSS-->
+<div class="FlashMsg FlashMsg--warning">
+    <div class="FlashMsg-title">
+        Warning:
+    </div>
+    <p class="FlashMsg-body">
+        Elit. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit.
+        <a href="#">lorem@ipsum.org</a>
+    </p>
+</div>
+
+</body>
+</html>
